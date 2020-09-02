@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="trendingcell" id="ThG-Ws-DZD" customClass="MyCollectionViewCell" customModule="TheMovie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="125" height="210"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="125" height="210"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FRv-Xx-eBb">
+                        <rect key="frame" x="0.0" y="0.0" width="125" height="190"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vvg-pZ-2YM">
+                        <rect key="frame" x="84" y="163.5" width="25" height="17.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Vvg-pZ-2YM" secondAttribute="height" multiplier="1.2" constant="1.1000000000000001" id="vnC-Hp-j7h"/>
+                        </constraints>
+                        <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal" backgroundImage="heart.fill" catalog="system"/>
+                        <connections>
+                            <action selector="untickFavoriteTapped:" destination="ThG-Ws-DZD" eventType="touchUpInside" id="46h-Se-HHa"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đây là tên phim phim phim phim phim " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHW-hF-LBC">
+                        <rect key="frame" x="5" y="192" width="117" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEa-T9-1zW">
+                        <rect key="frame" x="83.5" y="162.5" width="25.5" height="18.5"/>
+                        <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal" backgroundImage="heart" catalog="system"/>
+                        <connections>
+                            <action selector="tickFavoriteTapped:" destination="ThG-Ws-DZD" eventType="touchUpInside" id="h5M-8L-uPq"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="rEa-T9-1zW" firstAttribute="height" secondItem="Vvg-pZ-2YM" secondAttribute="height" multiplier="1.05" id="4zX-C4-dmB"/>
+                <constraint firstItem="wHW-hF-LBC" firstAttribute="top" secondItem="Vvg-pZ-2YM" secondAttribute="bottom" constant="10" id="55n-bL-hPu"/>
+                <constraint firstItem="Vvg-pZ-2YM" firstAttribute="width" secondItem="FRv-Xx-eBb" secondAttribute="width" multiplier="0.2" id="GzO-cU-t5D"/>
+                <constraint firstItem="rEa-T9-1zW" firstAttribute="width" secondItem="Vvg-pZ-2YM" secondAttribute="width" multiplier="1.01333" id="LsG-aM-Afk"/>
+                <constraint firstItem="FRv-Xx-eBb" firstAttribute="leading" secondItem="ThG-Ws-DZD" secondAttribute="leading" id="Lu7-ju-QGl"/>
+                <constraint firstItem="rEa-T9-1zW" firstAttribute="bottom" secondItem="Vvg-pZ-2YM" secondAttribute="bottom" id="Syg-56-bzu"/>
+                <constraint firstAttribute="trailing" secondItem="FRv-Xx-eBb" secondAttribute="trailing" id="Tp7-uN-nI1"/>
+                <constraint firstItem="Vvg-pZ-2YM" firstAttribute="trailing" secondItem="ThG-Ws-DZD" secondAttribute="trailingMargin" id="WNs-DT-Y6c"/>
+                <constraint firstItem="wHW-hF-LBC" firstAttribute="leading" secondItem="ThG-Ws-DZD" secondAttribute="leading" constant="5" id="Whs-iO-1pA"/>
+                <constraint firstItem="wHW-hF-LBC" firstAttribute="top" secondItem="FRv-Xx-eBb" secondAttribute="bottom" constant="2" id="cqQ-lZ-HJb"/>
+                <constraint firstAttribute="trailing" secondItem="wHW-hF-LBC" secondAttribute="trailing" constant="3" id="gQa-68-94y"/>
+                <constraint firstItem="rEa-T9-1zW" firstAttribute="trailing" secondItem="Vvg-pZ-2YM" secondAttribute="trailing" id="oa2-G2-21J"/>
+                <constraint firstItem="FRv-Xx-eBb" firstAttribute="top" secondItem="ThG-Ws-DZD" secondAttribute="top" id="owu-Vd-Kgg"/>
+                <constraint firstAttribute="bottom" secondItem="FRv-Xx-eBb" secondAttribute="bottom" constant="20" id="xpD-Wt-7Zf"/>
+            </constraints>
+            <size key="customSize" width="125" height="210"/>
+            <connections>
+                <outlet property="imageView" destination="FRv-Xx-eBb" id="gIe-pb-M36"/>
+                <outlet property="tickedFavoriteButton" destination="Vvg-pZ-2YM" id="YFf-54-Kj7"/>
+                <outlet property="titleMovieLabel" destination="wHW-hF-LBC" id="tP8-qd-Oz2"/>
+                <outlet property="untickedFavoriteButton" destination="rEa-T9-1zW" id="3Pp-gf-sQO"/>
+            </connections>
+            <point key="canvasLocation" x="38" y="-7"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+    </resources>
+</document>

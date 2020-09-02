@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iX1-Gh-dpx">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favorite Movie-->
+        <scene sceneID="Gwp-zG-op9">
+            <objects>
+                <viewController id="JuV-ik-TB7" customClass="FavoriteMovieViewController" customModule="TheMovie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kVd-QH-Ssd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cM6-5j-UMN">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pPq-os-A27">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cM6-5j-UMN" firstAttribute="leading" secondItem="vrS-hL-fmU" secondAttribute="leading" id="4Tv-fA-xdr"/>
+                            <constraint firstItem="vrS-hL-fmU" firstAttribute="bottom" secondItem="cM6-5j-UMN" secondAttribute="bottom" id="NgT-Jj-UIF"/>
+                            <constraint firstItem="cM6-5j-UMN" firstAttribute="top" secondItem="vrS-hL-fmU" secondAttribute="top" id="QkA-Th-qeg"/>
+                            <constraint firstItem="vrS-hL-fmU" firstAttribute="trailing" secondItem="cM6-5j-UMN" secondAttribute="trailing" id="l4k-xK-uhG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vrS-hL-fmU"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Favorite Movie" id="Uft-Tf-Vc4"/>
+                    <connections>
+                        <outlet property="collectionView" destination="cM6-5j-UMN" id="9cG-0H-Zgg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eAf-xC-2Hh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2132" y="781"/>
+        </scene>
+        <!--Favorite Movie-->
+        <scene sceneID="Rul-5y-cyk">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ayB-wp-85t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iX1-Gh-dpx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorite Movie" image="heart" id="AMT-Sc-DcI"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rRv-K7-f0V">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JuV-ik-TB7" kind="relationship" relationship="rootViewController" id="lEc-BH-jaD"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1272" y="782"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart" width="24" height="24"/>
+    </resources>
+</document>

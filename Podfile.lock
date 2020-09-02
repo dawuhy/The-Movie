@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (5.2.2)
+  - FPSCounter (4.0.1)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - Realm (5.3.5):
+    - Realm/Headers (= 5.3.5)
+  - Realm/Headers (5.3.5)
+  - RealmSwift (5.3.5):
+    - Realm (= 5.3.5)
+
+DEPENDENCIES:
+  - FPSCounter (~> 4.0)
+  - Moya (~> 14.0)
+  - RealmSwift
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - FPSCounter
+    - Moya
+    - Realm
+    - RealmSwift
+
+SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  FPSCounter: 262ec30f9f5a2fd7843b593ea80016fece7c809c
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  Realm: 2b52fcc86fc0ed3d75a56ac0eb1e73c4f1a60e16
+  RealmSwift: a6ea2ea561039fc3833c08dec81371a9a3bb5ca6
+
+PODFILE CHECKSUM: 8931f06618efa466d9e46e12f064d41a4722a09a
+
+COCOAPODS: 1.10.0.beta.1

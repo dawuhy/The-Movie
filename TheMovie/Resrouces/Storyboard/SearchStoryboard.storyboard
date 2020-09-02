@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VqQ-1l-1IZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search-->
+        <scene sceneID="Llm-kQ-iCT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VqQ-1l-1IZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="6bH-c0-ahj"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="e3B-si-PHd"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Il-Va-KOw">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kay-AF-H4w" kind="relationship" relationship="rootViewController" id="ht6-M3-mBZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K83-G8-gB9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="506" y="810"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="a89-mB-nvW">
+            <objects>
+                <viewController id="kay-AF-H4w" customClass="SearchViewController" customModule="TheMovie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m0G-W9-aq7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bgi-Mo-O7U">
+                                <rect key="frame" x="0.0" y="184" width="414" height="678"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="eQk-VX-htk">
+                                    <size key="itemSize" width="125" height="210"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <searchBar contentMode="redraw" text="" placeholder="Search Movie" translatesAutoresizingMaskIntoConstraints="NO" id="rmi-eQ-KXc">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <stackView opaque="NO" contentMode="left" distribution="fillEqually" alignment="lastBaseline" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FaY-xF-DNH">
+                                <rect key="frame" x="0.0" y="144" width="414" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VqU-cO-naY">
+                                        <rect key="frame" x="0.0" y="0.0" width="204.5" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Movies">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeSearchTypeToMovie:" destination="kay-AF-H4w" eventType="touchUpInside" id="GF1-xb-1Sn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ls-v5-as4">
+                                        <rect key="frame" x="209.5" y="0.0" width="204.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="People">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeSearchTypeToPeople:" destination="kay-AF-H4w" eventType="touchUpInside" id="zuS-lP-Ine"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Aqf-eK-mvq"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FaY-xF-DNH" firstAttribute="top" secondItem="rmi-eQ-KXc" secondAttribute="bottom" id="0UM-aU-utE"/>
+                            <constraint firstItem="FaY-xF-DNH" firstAttribute="leading" secondItem="cXf-t8-YBS" secondAttribute="leading" id="8ph-lP-rOt"/>
+                            <constraint firstItem="cXf-t8-YBS" firstAttribute="bottom" secondItem="bgi-Mo-O7U" secondAttribute="bottom" id="Bny-Fz-mTa"/>
+                            <constraint firstItem="cXf-t8-YBS" firstAttribute="trailing" secondItem="bgi-Mo-O7U" secondAttribute="trailing" id="D6u-KC-hfN"/>
+                            <constraint firstItem="cXf-t8-YBS" firstAttribute="trailing" secondItem="FaY-xF-DNH" secondAttribute="trailing" id="KAD-UP-BBl"/>
+                            <constraint firstItem="rmi-eQ-KXc" firstAttribute="top" secondItem="cXf-t8-YBS" secondAttribute="top" id="Tq9-cS-IDc"/>
+                            <constraint firstItem="rmi-eQ-KXc" firstAttribute="leading" secondItem="cXf-t8-YBS" secondAttribute="leading" id="Xw1-63-JT0"/>
+                            <constraint firstItem="bgi-Mo-O7U" firstAttribute="leading" secondItem="cXf-t8-YBS" secondAttribute="leading" id="ZcR-qv-XII"/>
+                            <constraint firstItem="bgi-Mo-O7U" firstAttribute="top" secondItem="FaY-xF-DNH" secondAttribute="bottom" id="izr-0a-r2X"/>
+                            <constraint firstItem="rmi-eQ-KXc" firstAttribute="trailing" secondItem="cXf-t8-YBS" secondAttribute="trailing" id="rhE-TL-LQT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cXf-t8-YBS"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search" id="bFc-XN-CLh"/>
+                    <connections>
+                        <outlet property="buttonSearchMovie" destination="VqU-cO-naY" id="a0P-p1-Hr6"/>
+                        <outlet property="buttonSearchPeople" destination="1Ls-v5-as4" id="G51-gp-CgR"/>
+                        <outlet property="collectionViewSearchResults" destination="bgi-Mo-O7U" id="8pm-0I-RDf"/>
+                        <outlet property="searchBar" destination="rmi-eQ-KXc" id="c44-rt-U5O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PRy-ZJ-0JP" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="505.79710144927537" y="1535.4910714285713"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+    </resources>
+</document>

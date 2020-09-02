@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P72-gz-Sit">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="HTD-mo-2qi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P72-gz-Sit" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="ci4-Lj-Det"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kda-WQ-s1J">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="q4s-EJ-Fsb" kind="relationship" relationship="rootViewController" id="qdg-Ip-eqh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7mB-fn-kbA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-543" y="810"/>
+        </scene>
+        <!--Popular-->
+        <scene sceneID="x4Q-sF-5gb">
+            <objects>
+                <viewController id="q4s-EJ-Fsb" userLabel="Popular" customClass="HomePageViewController" customModule="TheMovie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4TU-Ii-YZe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gVi-h5-4eY">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rn5-Ty-Adm">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gVi-h5-4eY" firstAttribute="leading" secondItem="xjh-Ch-Ghd" secondAttribute="leading" id="659-VA-5eP"/>
+                            <constraint firstItem="xjh-Ch-Ghd" firstAttribute="trailing" secondItem="gVi-h5-4eY" secondAttribute="trailing" id="855-KH-5DZ"/>
+                            <constraint firstItem="gVi-h5-4eY" firstAttribute="top" secondItem="xjh-Ch-Ghd" secondAttribute="top" id="Pdl-ft-X1f"/>
+                            <constraint firstItem="xjh-Ch-Ghd" firstAttribute="bottom" secondItem="gVi-h5-4eY" secondAttribute="bottom" id="uRo-SO-0gm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xjh-Ch-Ghd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home page" id="Kpo-Ah-Hmg"/>
+                    <connections>
+                        <outlet property="movieCollectionView" destination="gVi-h5-4eY" id="gtW-D6-5oF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eik-2f-4um" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-543" y="1524"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="house" catalog="system" width="128" height="110"/>
+    </resources>
+</document>
