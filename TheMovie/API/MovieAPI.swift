@@ -8,7 +8,6 @@
 
 import Foundation
 import Moya
-// --------------------------------------------------------
 
 enum MovieAPI {
     case getMovies(page: Int, type: MovieType)

@@ -14,7 +14,7 @@ PODS:
 DEPENDENCIES:
   - FPSCounter (~> 4.0)
   - Moya (~> 14.0)
-  - RealmSwift
+  - RealmSwift (~> 5.3.5)
 
 SPEC REPOS:
   trunk:

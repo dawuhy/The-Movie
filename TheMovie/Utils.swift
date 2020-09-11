@@ -22,7 +22,6 @@ enum MovieType {
     case top_rated
     case similar
     
-    
     func title() -> String {
         switch self {
         case .now_playing:
