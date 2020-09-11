@@ -86,7 +86,7 @@ class MovieDetailViewController: UIViewController {
         let similarMoviesVC = SimilarMoviesViewController.initSimilarMovies(movieType: .similar, rootMovieID: movie.id)
         self.addChild(similarMoviesVC)
         self.viewSimilarMovies.addSubview(similarMoviesVC.view)
-        self.didMove(toParent: self)
+        similarMoviesVC.didMove(toParent: self)
         
         NSLayoutConstraint.activate([
             similarMoviesVC.view.leadingAnchor.constraint(equalTo: viewSimilarMovies.leadingAnchor, constant: 0),

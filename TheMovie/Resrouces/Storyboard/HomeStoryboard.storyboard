@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-543" y="810"/>
         </scene>
-        <!--Popular-->
+        <!--Home Page-->
         <scene sceneID="x4Q-sF-5gb">
             <objects>
-                <viewController id="q4s-EJ-Fsb" userLabel="Popular" customClass="HomePageViewController" customModule="TheMovie" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="q4s-EJ-Fsb" userLabel="Home Page" customClass="HomePageViewController" customModule="TheMovie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4TU-Ii-YZe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
