@@ -28,7 +28,7 @@ struct Movie: Decodable {
         case overview
     }
     
-    init(movieObject: MovieObject) {
+    init(movieObject: FavoriteMovie) {
         self.id = movieObject.id
         self.posterPath = movieObject.posterPath
         self.backdropPath = movieObject.backdropPath

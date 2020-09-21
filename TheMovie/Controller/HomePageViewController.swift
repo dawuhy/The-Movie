@@ -23,6 +23,7 @@ class HomePageViewController: UIViewController {
         super.viewDidLoad()
         
         configureView()
+        RealmService().printPath()
         
         requestPopularMovies(page: 1)
         requestTopRatedMovies(page: 1)

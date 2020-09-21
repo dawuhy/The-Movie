@@ -8,7 +8,7 @@
 
 import RealmSwift
 
-class MovieObject: Object {
+class FavoriteMovie: Object {
     @objc dynamic var id: Int = 0
     @objc dynamic var title: String = ""
     @objc dynamic var posterPath:String = ""

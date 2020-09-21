@@ -29,7 +29,7 @@ class TrendingView: UICollectionReusableView {
         configureView()
         getTrendingMovie()
         collectionView.reloadData()
-        print("AWAKE FROM NIB")
+
         realmService.addObserver { (changes) in
             switch changes {
             case .success(_):

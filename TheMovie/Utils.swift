@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 
 var listFavoriteMovieId:[Any] = []
-var listFavoriteMovie: Results<MovieObject>!
+var listFavoriteMovie: Results<FavoriteMovie>!
 var noti: NotificationToken?
 let widthOfCells:CGFloat = 200
 let heightOfCells:CGFloat = widthOfCells * 1.5

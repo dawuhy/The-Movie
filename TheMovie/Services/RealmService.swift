@@ -14,7 +14,7 @@ protocol LocalDBServiceType {
     func loadData()
     func printPath()
     func deleteMovie(movie: Movie)
-    func addObserver(completion: @escaping (Result<Results<MovieObject>, Error>) -> Void)
+    func addObserver(completion: @escaping (Result<Results<FavoriteMovie>, Error>) -> Void)
 }
 
 class RealmService: LocalDBServiceType {
@@ -30,7 +30,7 @@ class RealmService: LocalDBServiceType {
     }
     
     func addMovie(movie: Movie) {
-        let movieObject = MovieObject()
+        let movieObject = FavoriteMovie()
         movieObject.loadFrom(movie: movie)
         try! self.realm.write {
             self.realm.add(movieObject)
@@ -40,7 +40,7 @@ class RealmService: LocalDBServiceType {
     }
     
     func loadData() {
-        listFavoriteMovie = realm.objects(MovieObject.self)
+        listFavoriteMovie = realm.objects(FavoriteMovie.self)
     }
     
     func deleteMovie(movie: Movie) {
@@ -51,7 +51,7 @@ class RealmService: LocalDBServiceType {
         print("Remove id: \(movie.id), total: \(listFavoriteMovieId.count)")
     }
     
-    func addObserver(completion: @escaping (Result<Results<MovieObject>, Error>) -> Void) {
+    func addObserver(completion: @escaping (Result<Results<FavoriteMovie>, Error>) -> Void) {
         notificationToken = listFavoriteMovie.observe() { changes in
             switch changes {
             case .initial(let movies):

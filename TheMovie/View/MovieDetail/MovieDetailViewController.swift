@@ -112,14 +112,14 @@ class MovieDetailViewController: UIViewController {
     }
     
     func setUpHeartButton() {
-        var favorite:Bool = false
+        var isFavorite:Bool = false
         if listFavoriteMovie != nil {
-            favorite = listFavoriteMovie.contains { (movieObject) -> Bool in
+            isFavorite = listFavoriteMovie.contains { (movieObject) -> Bool in
                 movieObject.id == movie.id ? true : false
             }
         }
         
-        if favorite {
+        if isFavorite {
             heartButton.image = UIImage(systemName: "heart.fill")
         } else {
             heartButton.image = UIImage(systemName: "heart")
@@ -128,10 +128,10 @@ class MovieDetailViewController: UIViewController {
     }
     
     @IBAction func addOrRemoveFavoriteTapped(_ sender: Any) {
-        let favorite:Bool = listFavoriteMovie.contains { (movieObject) -> Bool in
+        let isFavorite:Bool = listFavoriteMovie.contains { (movieObject) -> Bool in
             movieObject.id == movie.id ? true : false
         }
-        if favorite {
+        if isFavorite {
             heartButton.image = UIImage(systemName: "heart")
             realmService.deleteMovie(movie: movie)
         } else {
